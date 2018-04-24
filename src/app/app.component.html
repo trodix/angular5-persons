@@ -1,0 +1,14 @@
+<header>
+	<div>
+		<nav class="light-blue darken-1">
+			<ul>
+				<li><a [routerLink]="[ '/' ]" routerLinkActive="active">Home page</a></li>
+				<li><a [routerLink]="[ 'directory' ]">Directory page</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div class="container">
+	<!-- <app-home [ninja]="ninja" (onYell)="yell($event)">Hello from app</app-home> -->
+	<router-outlet></router-outlet>
+</div>

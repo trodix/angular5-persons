@@ -1,0 +1,17 @@
+<div>
+    <h1>List of persons</h1>
+    <div>
+        <input type="text" placeholder="Search a person" [(ngModel)]="keyword">
+        <ul class="collection">
+            <li class="collection-item" *ngFor="let person of persons | filter : keyword">{{person.name}}</li>
+        </ul>
+    </div>
+
+    <form id="add-person">
+        <div class="input-field">
+            <input type="text" [(ngModel)]="name" name="name" placeholder="Your name"/>
+            <input type="text" [(ngModel)]="age" name="age" placeholder="Your age"/>
+        </div>
+        <button class="btn waves-effect waves-light yellow accent-4" (click)="fbPostData(name, age)">Add Person</button>
+    </form>
+</div>
